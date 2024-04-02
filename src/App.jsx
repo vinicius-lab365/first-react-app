@@ -6,7 +6,6 @@ function App() {
   return (
     <>
       <h1>Adveture Trails</h1>
-      <CardTrilha />
     </>
   )
 }
