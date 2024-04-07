@@ -13,7 +13,7 @@ function App() {
       dificuldade: "Iniciante",
       tipo: "Caminhada / Trekking",
       nomeUsuario: "Vinícius",
-      urlImagem: "src/assets/imagem-trilha-exemplo.jpeg"
+      urlImagem: "public/assets/imagem-trilha-exemplo.jpeg"
     },
     {
       nomeTrilha: "Trilha do Cambirela",
@@ -24,7 +24,7 @@ function App() {
       dificuldade: "Intermediário",
       tipo: "Caminhada / Trekking",
       nomeUsuario: "Vinícius",
-      urlImagem: "src/assets/imagem-trilha-exemplo.jpeg"
+      urlImagem: "public/assets/imagem-trilha-exemplo.jpeg"
     }
   ]
 
