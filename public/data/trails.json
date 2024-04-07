@@ -1,0 +1,35 @@
+[
+  {
+    "nomeTrilha": "Trilha da Costa da Lagoa",
+    "cidade": "Florianópolis",
+    "estado": "SC",
+    "duracao": "120",
+    "trajeto": "4",
+    "dificuldade": "Iniciante",
+    "tipo": "caminhada / trekking",
+    "nomeUsuario": "Vinícius",
+    "urlImagem": "public/assets/imagem-trilha-exemplo.jpeg"
+  },
+  {
+    "nomeTrilha": "Trilha da Lagoinha do Leste",
+    "cidade": "Florianópolis",
+    "estado": "SC",
+    "duracao": "180",
+    "trajeto": "4",
+    "dificuldade": "Intermediário",
+    "tipo": "caminhada / trekking",
+    "nomeUsuario": "Vinícius",
+    "urlImagem": "public/assets/imagem-trilha-exemplo.jpeg"
+  },
+  {
+    "nomeTrilha": "Trilha do Cambirela",
+    "cidade": "Palhoça",
+    "estado": "SC",
+    "duracao": "180",
+    "trajeto": "4",
+    "dificuldade": "Intermediário",
+    "tipo": "caminhada / trekking",
+    "nomeUsuario": "Vinícius",
+    "urlImagem": "public/assets/imagem-trilha-exemplo.jpeg"
+  }
+]

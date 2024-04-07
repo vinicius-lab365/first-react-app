@@ -1,43 +1,28 @@
-import './App.css'
-import CardTrilha from './components/CardTrilha/index.jsx'
+import './App.css';
+import CardTrilha from './components/CardTrilha/index.jsx';
+import useFetch from './hooks/useFetch.js';
 
 function App() {
 
-  const listaTrilhas = [
-    {
-      nomeTrilha: "Trilha da Costa da Lagoa",
-      cidade: "Florianópolis",
-      estado: "SC",
-      duracao: "120",
-      trajeto: "4",
-      dificuldade: "Iniciante",
-      tipo: "Caminhada / Trekking",
-      nomeUsuario: "Vinícius",
-      urlImagem: "public/assets/imagem-trilha-exemplo.jpeg"
-    },
-    {
-      nomeTrilha: "Trilha do Cambirela",
-      cidade: "Palhoça",
-      estado: "SC",
-      duracao: "180",
-      trajeto: "4",
-      dificuldade: "Intermediário",
-      tipo: "Caminhada / Trekking",
-      nomeUsuario: "Vinícius",
-      urlImagem: "public/assets/imagem-trilha-exemplo.jpeg"
-    }
-  ]
+  const [trails, loading] = useFetch("public/data/trails.json");
 
   return (
     <>
+
+    {loading && <h4>Carregando trilhas</h4>}
+
+    {!loading && trails !== null && (
+      <>
       {
-        listaTrilhas.map((trilha, index) => (
+        trails.map((trilha, index) => (
           <CardTrilha dadosTrilha={trilha} key={index} />
         ))
       }
+      </>
+    )}
 
     </>
   )
 }
 
-export default App
+export default App;
