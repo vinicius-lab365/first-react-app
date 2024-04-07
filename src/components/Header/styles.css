@@ -1,0 +1,22 @@
+header {
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #504908;
+    padding: 0 80px;
+
+    position: fixed;
+    top: 0;
+}
+
+header, a {
+    color: #FFFFFF;
+}
+
+.links {
+    display: flex;
+    gap: 40px;
+}

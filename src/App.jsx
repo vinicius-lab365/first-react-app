@@ -1,5 +1,6 @@
 import './App.css';
 import CardTrilha from './components/CardTrilha/index.jsx';
+import Header from './components/Header/index.jsx';
 import useFetch from './hooks/useFetch.js';
 
 function App() {
@@ -8,9 +9,9 @@ function App() {
 
   return (
     <>
+    <Header />
 
     {loading && <h4>Carregando trilhas</h4>}
-
     {!loading && trails !== null && (
       <>
       {
