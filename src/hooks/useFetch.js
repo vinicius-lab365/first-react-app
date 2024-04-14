@@ -13,7 +13,7 @@ function useFetch(url) {
     setIsLoading(false);
    })
    .catch((err) => {
-    window.alert("Ocorreu um erro ao buxcar os dados");
+    window.alert("Ocorreu um erro ao buscar os dados");
     console.error(err);
    })
    .finally(() => setIsLoading(false));
