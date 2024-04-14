@@ -1,8 +1,14 @@
 import CardTrilha from "../../components/CardTrilha";
-import useFetch from "../../hooks/useFetch";
+
+// useContext
+import { useContext } from 'react';
+
+// TrailsContext
+import { TrailsContext } from "../../context/trailsContext";
 
 function TrailListPage() {
-  const [trails, loading] = useFetch("public/data/trails.json");
+
+  const {trails, loading} = useContext(TrailsContext);
 
   return (
     <div className="container">
@@ -10,8 +16,8 @@ function TrailListPage() {
       {loading && <h4>Carregando trilhas</h4>}
       {!loading && trails !== null && (
         <>
-          {trails.map((trilha, index) => (
-            <CardTrilha dadosTrilha={trilha} key={index} />
+          {trails.map((trail, index) => (
+            <CardTrilha dadosTrilha={trail} key={index} />
           ))}
         </>
       )}
