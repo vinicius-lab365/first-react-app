@@ -1,12 +1,15 @@
 import "./styles.css";
 
+// Link
+import { Link } from "react-router-dom"
+
 function Header() {
     return (
         <header>
-            <div className="logo"><a href="/">Adventure Trails FD</a></div>
+            <div className="logo"><Link to="/">Adventure Trails FD</Link></div>
             <div className="links">
-                <a href="#">Explorar trilhas</a>
-                <a href="#">Cadastrar trilhas</a>
+                <Link to='/lista-trilhas'>Explorar trilhas</Link>
+                <Link to='/cadastro-trilha'>Cadastrar Trilhas</Link>
             </div>
         </header>
     );
