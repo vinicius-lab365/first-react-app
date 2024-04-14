@@ -19,10 +19,8 @@ CardTrilha.propTypes = {
         nomeTrilha: PropTypes.string.isRequired,
         cidade: PropTypes.string.isRequired,
         estado: PropTypes.string.isRequired,
-        // duracao: PropTypes.number.isRequired,
-        // trajeto: PropTypes.number.isRequired,
-        duracao: PropTypes.string.isRequired,
-        trajeto: PropTypes.string.isRequired,
+        duracao: PropTypes.number.isRequired,
+        trajeto: PropTypes.number.isRequired,
         dificuldade: PropTypes.string.isRequired,
         // enum
         tipo: PropTypes.oneOf(['caminhada / trekking', 'ciclismo']),
