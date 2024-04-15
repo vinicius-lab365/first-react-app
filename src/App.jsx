@@ -6,12 +6,14 @@ import { Outlet } from "react-router-dom";
 
 // ContextProvider
 import { TrailsContextProvider } from "./context/trailsContext.jsx";
+import Footer from "./components/Footer/index.jsx";
 
 function App() {
   return (
     <TrailsContextProvider>
       <Header />
       <Outlet />
+      <Footer />
     </TrailsContextProvider>
   );
 }
