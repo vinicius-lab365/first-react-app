@@ -17,10 +17,7 @@ function CardTrilha({ dadosTrilha }) {
               {dadosTrilha.nomeTrilha} - {dadosTrilha.cidade} /{" "}
               {dadosTrilha.estado}
             </h2>
-            <img
-              src={"public/assets/heart-icon.png"}
-              alt="Imagem de um coração para dar likes"
-            />
+            <i class="fa-regular fa-heart"></i>
           </div>
           <h3 className="username">Por: {dadosTrilha.nomeUsuario}</h3>
           <div className="trail_data">

@@ -1,9 +1,8 @@
 .card_container {
-  max-width: 100%;
+  width: 960px;
   display: flex;
   box-shadow: 0.2rem 0.2rem 0.8rem rgb(185, 185, 185);
   font-family: "Inter", sans-serif;
-  margin: 20px 0;
 }
 
 .card_imagem {
@@ -20,6 +19,7 @@
 
 .title_wrapper {
   display: flex;
+  align-items: center;
   gap: 3rem;
 }
 
