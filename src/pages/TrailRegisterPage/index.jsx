@@ -36,6 +36,7 @@ function TrailRegisterPage() {
                 id="trail-name"
                 label="digite o nome da trilha"
                 variant="outlined"
+                type="text"
               />
             </Grid>
           </Grid>
@@ -54,6 +55,7 @@ function TrailRegisterPage() {
                 id="trail-duration"
                 label="digite a duração em minutos"
                 variant="outlined"
+                type="number"
               />
             </Grid>
           </Grid>
@@ -70,6 +72,7 @@ function TrailRegisterPage() {
                 id="trail-path"
                 label="digite a distância em km"
                 variant="outlined"
+                type="number"
               />
             </Grid>
           </Grid>
@@ -88,6 +91,7 @@ function TrailRegisterPage() {
                 id="city"
                 label="digite o nome da cidade"
                 variant="outlined"
+                type="text"
               />
             </Grid>
           </Grid>
@@ -105,6 +109,7 @@ function TrailRegisterPage() {
                   labelId="label-state"
                   id="state"
                   label="Selecione o estado"
+                  type="text"
                 >
                   {states.map((estado) => (
                     <MenuItem key={estado} value={estado}>
@@ -130,6 +135,7 @@ function TrailRegisterPage() {
                 id="username"
                 label="seu nome completo"
                 variant="outlined"
+                type="text"
               />
             </Grid>
           </Grid>
@@ -149,6 +155,7 @@ function TrailRegisterPage() {
                   labelId="label-difficulty"
                   id="difficulty"
                   label="Selecione a dificuldade"
+                  type="text"
                 >
                   {difficulties.map((difficultyy) => (
                     <MenuItem key={difficultyy} value={difficultyy}>
@@ -177,6 +184,7 @@ function TrailRegisterPage() {
                   labelId="label--trail-type"
                   id="trail-type"
                   label="Selecione o tipo de trilha"
+                  type="text"
                 >
                   {types.map((type) => (
                     <MenuItem key={type} value={type}>
@@ -202,6 +210,7 @@ function TrailRegisterPage() {
                 id="trail-url"
                 label="insira um link de uma imagem da trilha"
                 variant="outlined"
+                type="text"
               />
             </Grid>
           </Grid>
