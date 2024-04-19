@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 96rem;
+    margin: 17rem auto;
+}
+
+.title {
+    font-size: 3.2rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    margin-bottom: 4rem;
+}
+
+.label {
+    font-family: 'Inter', sans-serif;
+    color: #304050;
+    display: block;
+    margin-bottom: .8rem;
+}
+
+.btn_wrapper {
+    margin-top: 4rem;
+    display: flex;
+    gap: 1.4rem;
+}
