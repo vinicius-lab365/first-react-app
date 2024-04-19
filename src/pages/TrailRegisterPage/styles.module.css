@@ -6,21 +6,21 @@
 }
 
 .title {
-    font-size: 3.2rem;
+    font-size: 32px;
     font-family: 'Inter', sans-serif;
     font-weight: 600;
-    margin-bottom: 4rem;
+    margin-bottom: 40px;
 }
 
 .label {
     font-family: 'Inter', sans-serif;
     color: #304050;
     display: block;
-    margin-bottom: .8rem;
+    margin-bottom: 8px;
 }
 
 .btn_wrapper {
-    margin-top: 4rem;
+    margin-top: 40px;
     display: flex;
-    gap: 1.4rem;
+    gap: 14px;
 }

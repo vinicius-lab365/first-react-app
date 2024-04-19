@@ -1,34 +1,34 @@
 import * as PropTypes from "prop-types";
-import "./styles.css";
+import styles from "./styles.module.css";
 
 function CardTrilha({ dadosTrilha }) {
   return (
     <div>
-      <div className="card_container">
+      <div className={styles.card_container}>
         <img
-          className="card_imagem"
+          className={styles.card_imagem}
           width={200}
           src={dadosTrilha.urlImagem}
           alt="imagem trilha"
         />
-        <div className="descriptions_wrapper">
-          <div className="title_wrapper">
+        <div className={styles.descriptions_wrapper}>
+          <div className={styles.title_wrapper}>
             <h2>
               {dadosTrilha.nomeTrilha} - {dadosTrilha.cidade} /{" "}
               {dadosTrilha.estado}
             </h2>
             <i class="fa-regular fa-heart"></i>
           </div>
-          <h3 className="username">Por: {dadosTrilha.nomeUsuario}</h3>
-          <div className="trail_data">
+          <h3 className={styles.username}>Por: {dadosTrilha.nomeUsuario}</h3>
+          <div className={styles.trail_data}>
             <p>Duração: {dadosTrilha.duracao}min</p>
             <p>Trajeto: {dadosTrilha.trajeto}km</p>
             <div>
               <span>{dadosTrilha.dificuldade}</span>
             </div>
           </div>
-          <div className="rating_wrapper">
-            <ul className="stars_wrapper">
+          <div className={styles.rating_wrapper}>
+            <ul className={styles.stars_wrapper}>
               <li>
                 <img
                   src={"public/assets/star-icon-colorede.png"}

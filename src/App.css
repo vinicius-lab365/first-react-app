@@ -10,15 +10,6 @@
     text-decoration: none;
 }
 
-:root {
-    font-size: 65.5%;
-}
-
 body {
-    font-size: 1.6rem;
     font-family: "Comfortaa", sans-serif;
 }
-
-/* .container {
-    padding: 10rem;
-} */
