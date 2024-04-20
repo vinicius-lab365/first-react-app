@@ -7,6 +7,7 @@ import {
   Select,
   TextField,
 } from "@mui/material";
+import { useForm } from "react-hook-form";
 import styles from "./styles.module.css";
 import Button from "../../components/Button";
 
@@ -14,10 +15,12 @@ function TrailRegisterPage() {
   const states = ["SC", "SP", "RJ"];
   const difficulties = ["Fácil", "Moderado", "Difícil"];
   const types = ["Ida e volta", "Ponto a ponto"];
+  
+  const {register} = useForm();
 
   return (
     <Container
-      
+    component={'form'}
       sx={{
         mt: 20,
         mb: 31,
@@ -37,6 +40,10 @@ function TrailRegisterPage() {
                 label="digite o nome da trilha"
                 variant="outlined"
                 type="text"
+                {...register("trail-name", {
+                  required: "Campo obrigatório", 
+                  maxLength: {value: 100, message: "Máximo 100 caracteres"}
+                })}
               />
             </Grid>
           </Grid>
@@ -56,6 +63,9 @@ function TrailRegisterPage() {
                 label="digite a duração em minutos"
                 variant="outlined"
                 type="number"
+                {...register("trail-duration", {
+                  required: "Campo obrigatório"
+                })}
               />
             </Grid>
           </Grid>
@@ -73,6 +83,9 @@ function TrailRegisterPage() {
                 label="digite a distância em km"
                 variant="outlined"
                 type="number"
+                {...register("trail-path", {
+                  required: "Campo obrigatório"
+                })}
               />
             </Grid>
           </Grid>
@@ -92,6 +105,10 @@ function TrailRegisterPage() {
                 label="digite o nome da cidade"
                 variant="outlined"
                 type="text"
+                {...register("city", {
+                  required: "Campo obrigatório", 
+                  maxLength: {value: 60, message: "Máximo 60 caracteres"}
+                })}
               />
             </Grid>
           </Grid>
@@ -110,6 +127,10 @@ function TrailRegisterPage() {
                   id="state"
                   label="Selecione o estado"
                   type="text"
+                  {...register("state", {
+                    required: "Campo obrigatório", 
+                    maxLength: {value: 2, message: "Máximo 2 caracteres"}
+                  })}
                 >
                   {states.map((estado) => (
                     <MenuItem key={estado} value={estado}>
@@ -136,6 +157,10 @@ function TrailRegisterPage() {
                 label="seu nome completo"
                 variant="outlined"
                 type="text"
+                {...register("username", {
+                  required: "Campo obrigatório", 
+                  maxLength: {value: 100, message: "Máximo 100 caracteres"}
+                })}
               />
             </Grid>
           </Grid>
@@ -156,6 +181,9 @@ function TrailRegisterPage() {
                   id="difficulty"
                   label="Selecione a dificuldade"
                   type="text"
+                  {...register("difficulty", {
+                    required: "Campo obrigatório"
+                  })}
                 >
                   {difficulties.map((difficultyy) => (
                     <MenuItem key={difficultyy} value={difficultyy}>
@@ -181,10 +209,13 @@ function TrailRegisterPage() {
                   Selecione o tipo de trilha
                 </InputLabel>
                 <Select
-                  labelId="label--trail-type"
+                  labelId="label-trail-type"
                   id="trail-type"
                   label="Selecione o tipo de trilha"
                   type="text"
+                  {...register("trail-type", {
+                    required: "Campo obrigatório"
+                  })}
                 >
                   {types.map((type) => (
                     <MenuItem key={type} value={type}>
@@ -211,6 +242,10 @@ function TrailRegisterPage() {
                 label="insira um link de uma imagem da trilha"
                 variant="outlined"
                 type="text"
+                {...register("trail-name", {
+                  required: "Campo obrigatório", 
+                  maxLength: {value: 300, message: "Máximo 300 caracteres"}
+                })}
               />
             </Grid>
           </Grid>
@@ -220,7 +255,7 @@ function TrailRegisterPage() {
       </Grid>
 
       <div className={styles.btn_wrapper}>
-        <Button value={"Cadastrar"} />
+        <Button value={"Cadastrar"} sx={{}}/>
         <Button value={"Voltar"} className={styles.btn_back} />
       </div>
     </Container>
