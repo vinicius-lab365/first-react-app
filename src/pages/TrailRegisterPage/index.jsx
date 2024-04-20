@@ -12,11 +12,39 @@ import styles from "./styles.module.css";
 import Button from "../../components/Button";
 
 function TrailRegisterPage() {
-  const states = ["SC", "SP", "RJ"];
+  const states = [
+    "AC",
+    "AL",
+    "AP",
+    "AM",
+    "BA",
+    "CE",
+    "DF",
+    "ES",
+    "GO",
+    "MA",
+    "MT",
+    "MS",
+    "MG",
+    "PA",
+    "PB",
+    "PR",
+    "PE",
+    "PI",
+    "RJ",
+    "RN",
+    "RS",
+    "RO",
+    "RR",
+    "SC",
+    "SP",
+    "SE",
+    "TO",
+  ];
   const difficulties = ["Fácil", "Moderado", "Difícil"];
-  const types = ["Ida e volta", "Ponto a ponto"];
-  
-  const {register, handleSubmit} = useForm();
+  const types = ["Caminhada/Trakking", "Ciclismo"];
+
+  const { register, handleSubmit } = useForm();
 
   function sendForm(handleSubmit) {
     console.log(handleSubmit);
@@ -24,8 +52,8 @@ function TrailRegisterPage() {
 
   return (
     <Container
-    component={'form'}
-    onSubmit={handleSubmit(sendForm)}
+      component={"form"}
+      onSubmit={handleSubmit(sendForm)}
       sx={{
         mt: 20,
         mb: 31,
@@ -46,8 +74,8 @@ function TrailRegisterPage() {
                 variant="outlined"
                 type="text"
                 {...register("trail-name", {
-                  required: "Campo obrigatório", 
-                  maxLength: {value: 100, message: "Máximo 100 caracteres"}
+                  required: "Campo obrigatório",
+                  maxLength: { value: 100, message: "Máximo 100 caracteres" },
                 })}
               />
             </Grid>
@@ -69,7 +97,7 @@ function TrailRegisterPage() {
                 variant="outlined"
                 type="number"
                 {...register("trail-duration", {
-                  required: "Campo obrigatório"
+                  required: "Campo obrigatório",
                 })}
               />
             </Grid>
@@ -89,7 +117,7 @@ function TrailRegisterPage() {
                 variant="outlined"
                 type="number"
                 {...register("trail-path", {
-                  required: "Campo obrigatório"
+                  required: "Campo obrigatório",
                 })}
               />
             </Grid>
@@ -111,8 +139,8 @@ function TrailRegisterPage() {
                 variant="outlined"
                 type="text"
                 {...register("city", {
-                  required: "Campo obrigatório", 
-                  maxLength: {value: 60, message: "Máximo 60 caracteres"}
+                  required: "Campo obrigatório",
+                  maxLength: { value: 60, message: "Máximo 60 caracteres" },
                 })}
               />
             </Grid>
@@ -133,8 +161,8 @@ function TrailRegisterPage() {
                   label="Selecione o estado"
                   type="text"
                   {...register("state", {
-                    required: "Campo obrigatório", 
-                    maxLength: {value: 2, message: "Máximo 2 caracteres"}
+                    required: "Campo obrigatório",
+                    maxLength: { value: 2, message: "Máximo 2 caracteres" },
                   })}
                 >
                   {states.map((estado) => (
@@ -163,8 +191,8 @@ function TrailRegisterPage() {
                 variant="outlined"
                 type="text"
                 {...register("username", {
-                  required: "Campo obrigatório", 
-                  maxLength: {value: 100, message: "Máximo 100 caracteres"}
+                  required: "Campo obrigatório",
+                  maxLength: { value: 100, message: "Máximo 100 caracteres" },
                 })}
               />
             </Grid>
@@ -187,7 +215,7 @@ function TrailRegisterPage() {
                   label="Selecione a dificuldade"
                   type="text"
                   {...register("difficulty", {
-                    required: "Campo obrigatório"
+                    required: "Campo obrigatório",
                   })}
                 >
                   {difficulties.map((difficultyy) => (
@@ -219,7 +247,7 @@ function TrailRegisterPage() {
                   label="Selecione o tipo de trilha"
                   type="text"
                   {...register("trail-type", {
-                    required: "Campo obrigatório"
+                    required: "Campo obrigatório",
                   })}
                 >
                   {types.map((type) => (
@@ -248,8 +276,8 @@ function TrailRegisterPage() {
                 variant="outlined"
                 type="text"
                 {...register("trail-url", {
-                  required: "Campo obrigatório", 
-                  maxLength: {value: 300, message: "Máximo 300 caracteres"}
+                  required: "Campo obrigatório",
+                  maxLength: { value: 300, message: "Máximo 300 caracteres" },
                 })}
               />
             </Grid>
@@ -260,7 +288,7 @@ function TrailRegisterPage() {
       </Grid>
 
       <div className={styles.btn_wrapper}>
-        <Button value={"Cadastrar"} type="submit"/>
+        <Button value={"Cadastrar"} type="submit" />
         <Button value={"Voltar"} className={styles.btn_back} />
       </div>
     </Container>
