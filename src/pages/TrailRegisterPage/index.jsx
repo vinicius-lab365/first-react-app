@@ -16,11 +16,16 @@ function TrailRegisterPage() {
   const difficulties = ["Fácil", "Moderado", "Difícil"];
   const types = ["Ida e volta", "Ponto a ponto"];
   
-  const {register} = useForm();
+  const {register, handleSubmit} = useForm();
+
+  function sendForm(handleSubmit) {
+    console.log(handleSubmit);
+  }
 
   return (
     <Container
     component={'form'}
+    onSubmit={handleSubmit(sendForm)}
       sx={{
         mt: 20,
         mb: 31,
@@ -242,7 +247,7 @@ function TrailRegisterPage() {
                 label="insira um link de uma imagem da trilha"
                 variant="outlined"
                 type="text"
-                {...register("trail-name", {
+                {...register("trail-url", {
                   required: "Campo obrigatório", 
                   maxLength: {value: 300, message: "Máximo 300 caracteres"}
                 })}
@@ -255,7 +260,7 @@ function TrailRegisterPage() {
       </Grid>
 
       <div className={styles.btn_wrapper}>
-        <Button value={"Cadastrar"} sx={{}}/>
+        <Button value={"Cadastrar"} type="submit"/>
         <Button value={"Voltar"} className={styles.btn_back} />
       </div>
     </Container>
