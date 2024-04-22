@@ -111,6 +111,9 @@ function TrailRegisterPage() {
             </Grid>
             <Grid item xs={12}>
               <TextField
+                inputProps={{
+                  step: 0.1
+                }}
                 fullWidth
                 id="trail-path"
                 label="digite a distância em km"
@@ -156,6 +159,7 @@ function TrailRegisterPage() {
               <FormControl fullWidth variant="outlined">
                 <InputLabel id="label-state">Selecione o estado</InputLabel>
                 <Select
+                  defaultValue={""}
                   labelId="label-state"
                   id="state"
                   label="Selecione o estado"
@@ -210,6 +214,7 @@ function TrailRegisterPage() {
                   Selecione a dificuldade
                 </InputLabel>
                 <Select
+                  defaultValue={""}
                   labelId="label-difficulty"
                   id="difficulty"
                   label="Selecione a dificuldade"
@@ -242,6 +247,7 @@ function TrailRegisterPage() {
                   Selecione o tipo de trilha
                 </InputLabel>
                 <Select
+                  defaultValue={""}
                   labelId="label-trail-type"
                   id="trail-type"
                   label="Selecione o tipo de trilha"
