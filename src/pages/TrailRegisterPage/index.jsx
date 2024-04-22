@@ -44,14 +44,14 @@ function TrailRegisterPage() {
     "TO",
   ];
   const difficulties = ["Fácil", "Moderado", "Difícil"];
-  const types = ["Caminhada/Trakking", "Ciclismo"];
+  const types = ["caminhada / trekking", "ciclismo"];
 
   const { register, handleSubmit } = useForm();
   const { addTrail } = useContext(TrailsContext);
 
   function sendForm(handleSubmit) {
     console.log(handleSubmit);
-    addTrail(handleSubmit);
+    addTrail({...handleSubmit, duracao: Number(handleSubmit.duracao), trajeto: Number(handleSubmit.trajeto)});
   }
 
   return (
@@ -73,11 +73,11 @@ function TrailRegisterPage() {
             <Grid item xs={12}>
               <TextField
                 fullWidth
-                id="trail-name"
+                id="nomeTrilha"
                 label="digite o nome da trilha"
                 variant="outlined"
                 type="text"
-                {...register("trail-name", {
+                {...register("nomeTrilha", {
                   required: "Campo obrigatório",
                   maxLength: { value: 100, message: "Máximo 100 caracteres" },
                 })}
@@ -96,11 +96,11 @@ function TrailRegisterPage() {
             <Grid item xs={12}>
               <TextField
                 fullWidth
-                id="trail-duration"
+                id="duracao"
                 label="digite a duração em minutos"
                 variant="outlined"
                 type="number"
-                {...register("trail-duration", {
+                {...register("duracao", {
                   required: "Campo obrigatório",
                 })}
               />
@@ -119,11 +119,11 @@ function TrailRegisterPage() {
                   step: 0.1
                 }}
                 fullWidth
-                id="trail-path"
+                id="trajeto"
                 label="digite a distância em km"
                 variant="outlined"
                 type="number"
-                {...register("trail-path", {
+                {...register("trajeto", {
                   required: "Campo obrigatório",
                 })}
               />
@@ -141,11 +141,11 @@ function TrailRegisterPage() {
             <Grid item xs={12}>
               <TextField
                 fullWidth
-                id="city"
+                id="cidade"
                 label="digite o nome da cidade"
                 variant="outlined"
                 type="text"
-                {...register("city", {
+                {...register("cidade", {
                   required: "Campo obrigatório",
                   maxLength: { value: 60, message: "Máximo 60 caracteres" },
                 })}
@@ -165,10 +165,10 @@ function TrailRegisterPage() {
                 <Select
                   defaultValue={""}
                   labelId="label-state"
-                  id="state"
+                  id="estado"
                   label="Selecione o estado"
                   type="text"
-                  {...register("state", {
+                  {...register("estado", {
                     required: "Campo obrigatório",
                     maxLength: { value: 2, message: "Máximo 2 caracteres" },
                   })}
@@ -194,11 +194,11 @@ function TrailRegisterPage() {
             <Grid item xs={12}>
               <TextField
                 fullWidth
-                id="username"
+                id="nomeUsuario"
                 label="seu nome completo"
                 variant="outlined"
                 type="text"
-                {...register("username", {
+                {...register("nomeUsuario", {
                   required: "Campo obrigatório",
                   maxLength: { value: 100, message: "Máximo 100 caracteres" },
                 })}
@@ -220,10 +220,10 @@ function TrailRegisterPage() {
                 <Select
                   defaultValue={""}
                   labelId="label-difficulty"
-                  id="difficulty"
+                  id="dificuldade"
                   label="Selecione a dificuldade"
                   type="text"
-                  {...register("difficulty", {
+                  {...register("dificuldade", {
                     required: "Campo obrigatório",
                   })}
                 >
@@ -253,10 +253,10 @@ function TrailRegisterPage() {
                 <Select
                   defaultValue={""}
                   labelId="label-trail-type"
-                  id="trail-type"
+                  id="tipo"
                   label="Selecione o tipo de trilha"
                   type="text"
-                  {...register("trail-type", {
+                  {...register("tipo", {
                     required: "Campo obrigatório",
                   })}
                 >
@@ -281,11 +281,11 @@ function TrailRegisterPage() {
             <Grid item xs={12}>
               <TextField
                 fullWidth
-                id="trail-url"
+                id="urlImagem"
                 label="insira um link de uma imagem da trilha"
                 variant="outlined"
                 type="text"
-                {...register("trail-url", {
+                {...register("urlImagem", {
                   required: "Campo obrigatório",
                   maxLength: { value: 300, message: "Máximo 300 caracteres" },
                 })}
