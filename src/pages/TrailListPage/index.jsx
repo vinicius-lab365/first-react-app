@@ -21,8 +21,8 @@ function TrailListPage() {
         {!loading && trails !== null && (
           <>
             {trails.map((trail, index) => (
-              <div className={styles.card_wrapper}>
-                <CardTrilha dadosTrilha={trail} key={index} />
+              <div key={index} className={styles.card_wrapper}>
+                <CardTrilha dadosTrilha={trail} />
               </div>
             ))}
           </>
