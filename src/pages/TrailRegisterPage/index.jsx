@@ -10,6 +10,8 @@ import {
 import { useForm } from "react-hook-form";
 import styles from "./styles.module.css";
 import Button from "../../components/Button";
+import { TrailsContext } from "../../context/trailsContext";
+import { useContext } from "react";
 
 function TrailRegisterPage() {
   const states = [
@@ -45,9 +47,11 @@ function TrailRegisterPage() {
   const types = ["Caminhada/Trakking", "Ciclismo"];
 
   const { register, handleSubmit } = useForm();
+  const { addTrail } = useContext(TrailsContext);
 
   function sendForm(handleSubmit) {
     console.log(handleSubmit);
+    addTrail(handleSubmit);
   }
 
   return (
