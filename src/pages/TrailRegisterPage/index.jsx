@@ -1,4 +1,5 @@
 import {
+  Alert,
   Container,
   FormControl,
   Grid,
@@ -46,12 +47,20 @@ function TrailRegisterPage() {
   const difficulties = ["Fácil", "Moderado", "Difícil"];
   const types = ["caminhada / trekking", "ciclismo"];
 
-  const { register, handleSubmit } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
   const { addTrail } = useContext(TrailsContext);
 
   function sendForm(handleSubmit) {
     console.log(handleSubmit);
-    addTrail({...handleSubmit, duracao: Number(handleSubmit.duracao), trajeto: Number(handleSubmit.trajeto)});
+    addTrail({
+      ...handleSubmit,
+      duracao: Number(handleSubmit.duracao),
+      trajeto: Number(handleSubmit.trajeto),
+    });
   }
 
   return (
@@ -82,6 +91,9 @@ function TrailRegisterPage() {
                   maxLength: { value: 100, message: "Máximo 100 caracteres" },
                 })}
               />
+              {errors?.nomeTrilha && (
+                <Alert severity="warning">{errors.nomeTrilha.message}</Alert>
+              )}
             </Grid>
           </Grid>
         </Grid>
@@ -104,6 +116,9 @@ function TrailRegisterPage() {
                   required: "Campo obrigatório",
                 })}
               />
+              {errors?.duracao && (
+                <Alert severity="warning">{errors.duracao.message}</Alert>
+              )}
             </Grid>
           </Grid>
         </Grid>
@@ -116,7 +131,7 @@ function TrailRegisterPage() {
             <Grid item xs={12}>
               <TextField
                 inputProps={{
-                  step: 0.1
+                  step: 0.1,
                 }}
                 fullWidth
                 id="trajeto"
@@ -127,6 +142,9 @@ function TrailRegisterPage() {
                   required: "Campo obrigatório",
                 })}
               />
+              {errors?.trajeto && (
+                <Alert severity="warning">{errors.trajeto.message}</Alert>
+              )}
             </Grid>
           </Grid>
         </Grid>
@@ -150,6 +168,9 @@ function TrailRegisterPage() {
                   maxLength: { value: 60, message: "Máximo 60 caracteres" },
                 })}
               />
+              {errors?.cidade && (
+                <Alert severity="warning">{errors.cidade.message}</Alert>
+              )}
             </Grid>
           </Grid>
         </Grid>
@@ -180,6 +201,9 @@ function TrailRegisterPage() {
                   ))}
                 </Select>
               </FormControl>
+              {errors?.estado && (
+                <Alert severity="warning">{errors.estado.message}</Alert>
+              )}
             </Grid>
           </Grid>
         </Grid>
@@ -203,6 +227,9 @@ function TrailRegisterPage() {
                   maxLength: { value: 100, message: "Máximo 100 caracteres" },
                 })}
               />
+              {errors?.nomeUsuario && (
+                <Alert severity="warning">{errors.nomeUsuario.message}</Alert>
+              )}
             </Grid>
           </Grid>
         </Grid>
@@ -234,6 +261,9 @@ function TrailRegisterPage() {
                   ))}
                 </Select>
               </FormControl>
+              {errors?.dificuldade && (
+                <Alert severity="warning">{errors.dificuldade.message}</Alert>
+              )}
             </Grid>
           </Grid>
         </Grid>
@@ -267,6 +297,9 @@ function TrailRegisterPage() {
                   ))}
                 </Select>
               </FormControl>
+              {errors?.tipo && (
+                <Alert severity="warning">{errors.tipo.message}</Alert>
+              )}
             </Grid>
           </Grid>
         </Grid>
@@ -290,6 +323,9 @@ function TrailRegisterPage() {
                   maxLength: { value: 300, message: "Máximo 300 caracteres" },
                 })}
               />
+              {errors?.urlImagem && (
+                <Alert severity="warning">{errors.urlImagem.message}</Alert>
+              )}
             </Grid>
           </Grid>
         </Grid>
