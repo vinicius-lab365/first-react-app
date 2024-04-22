@@ -17,7 +17,7 @@ function CardTrilha({ dadosTrilha }) {
               {dadosTrilha.nomeTrilha} - {dadosTrilha.cidade} /{" "}
               {dadosTrilha.estado}
             </h2>
-            <i class="fa-regular fa-heart"></i>
+            <i className="fa-regular fa-heart"></i>
           </div>
           <h3 className={styles.username}>Por: {dadosTrilha.nomeUsuario}</h3>
           <div className={styles.trail_data}>
