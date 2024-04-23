@@ -9,7 +9,7 @@
 .cover {
     width: 100%;
     height: 453px;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url("assets/imagem-trilha-1.png");
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url("imagem-trilha-1.png");
     background-size: cover;
     background-position: center;
 }
