@@ -13,6 +13,7 @@ import styles from "./styles.module.css";
 import Button from "../../components/Button";
 import { TrailsContext } from "../../context/trailsContext";
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 
 function TrailRegisterPage() {
   const states = [
@@ -335,7 +336,9 @@ function TrailRegisterPage() {
 
       <div className={styles.btn_wrapper}>
         <Button value={"Cadastrar"} type="submit" />
-        <Button value={"Voltar"} className={styles.btn_back} />
+        <Link to="/">
+          <Button value={"Voltar"} className={styles.btn_back} />
+        </Link>
       </div>
     </Container>
   );
