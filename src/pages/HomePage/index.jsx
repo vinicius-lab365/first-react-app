@@ -49,7 +49,7 @@ function HomePage() {
             <Button value={"Cadastrar nova trilha"} />
           </Link>
         </div>
-        <img src={"public/assets/imagem-trilha-2.png"} alt="" />
+        <img src={"assets/imagem-trilha-2.png"} alt="" />
       </div>
     </div>
   );

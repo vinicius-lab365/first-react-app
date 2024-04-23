@@ -7,7 +7,7 @@ import useFetch from '../hooks/useFetch'
 export const TrailsContext = createContext();
 
 export const TrailsContextProvider = ({ children }) => {
-  const [data, loading] = useFetch("public/data/trails.json");
+  const [data, loading] = useFetch("data/trails.json");
   const [trails, setTrails] = useState([]);
 
   useEffect(() => {

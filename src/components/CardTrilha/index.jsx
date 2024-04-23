@@ -31,31 +31,31 @@ function CardTrilha({ dadosTrilha }) {
             <ul className={styles.stars_wrapper}>
               <li>
                 <img
-                  src={"public/assets/star-icon-colorede.png"}
+                  src={"assets/star-icon-colorede.png"}
                   alt="Imagem de uma estrela de avaliações"
                 />
               </li>
               <li>
                 <img
-                  src={"public/assets/star-icon-colorede.png"}
+                  src={"assets/star-icon-colorede.png"}
                   alt="Imagem de uma estrela de avaliações"
                 />
               </li>
               <li>
                 <img
-                  src={"public/assets/star-icon-colorede.png"}
+                  src={"assets/star-icon-colorede.png"}
                   alt="Imagem de uma estrela de avaliações"
                 />
               </li>
               <li>
                 <img
-                  src={"public/assets/star-icon-colorede.png"}
+                  src={"assets/star-icon-colorede.png"}
                   alt="Imagem de uma estrela de avaliações"
                 />
               </li>
               <li>
                 <img
-                  src={"public/assets/star-icon.png"}
+                  src={"assets/star-icon.png"}
                   alt="Imagem de uma estrela de avaliações"
                 />
               </li>

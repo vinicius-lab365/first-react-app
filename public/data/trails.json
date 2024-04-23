@@ -8,7 +8,7 @@
     "dificuldade": "Iniciante",
     "tipo": "caminhada / trekking",
     "nomeUsuario": "Vinícius",
-    "urlImagem": "public/assets/imagem-trilha-exemplo.jpeg"
+    "urlImagem": "assets/imagem-trilha-exemplo.jpeg"
   },
   {
     "nomeTrilha": "Trilha da Lagoinha do Leste",
@@ -19,7 +19,7 @@
     "dificuldade": "Intermediário",
     "tipo": "caminhada / trekking",
     "nomeUsuario": "Vinícius",
-    "urlImagem": "public/assets/imagem-trilha-exemplo.jpeg"
+    "urlImagem": "assets/imagem-trilha-exemplo.jpeg"
   },
   {
     "nomeTrilha": "Trilha do Cambirela",
@@ -30,6 +30,6 @@
     "dificuldade": "Intermediário",
     "tipo": "caminhada / trekking",
     "nomeUsuario": "Vinícius",
-    "urlImagem": "public/assets/imagem-trilha-exemplo.jpeg"
+    "urlImagem": "assets/imagem-trilha-exemplo.jpeg"
   }
 ]
